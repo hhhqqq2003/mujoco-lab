@@ -308,3 +308,4 @@ mujoco-lab/
 ├── LICENSE                  MIT
 └── out/                     所有图片和 GIF 产物（运行后生成，已 gitignore）
 ```
+# mujoco-lab

@@ -80,6 +80,17 @@ def drop_ball(sr: str, dt: float = 0.002, duration: float = 2.0):
     data = mujoco.MjData(model)
     zs = []
     for _ in range(int(duration / dt)):
+
+        # 增加风阻
+        velocity = data.qvel[:3].copy()
+        rho = 1.225
+        Cd = 0.47
+        radius = 0.1
+        A = np.pi * radius**2
+        speed = np.linalg.norm(velocity)
+        drag_force = -0.5 * rho * Cd * A * speed * velocity
+        data.qfrc_applied[:3] += drag_force
+
         mujoco.mj_step(model, data)
         zs.append(data.qpos[2])
     zs = np.array(zs)

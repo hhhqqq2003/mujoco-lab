@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# MuJoCo 运行日志（渲染时的无害警告）
+MUJOCO_LOG.TXT
+
+# 运行产物：python3 run_all.py / 各课程脚本会重新生成
+out/
+
+# 编辑器 / 系统
+.DS_Store
+.vscode/
+.idea/
+.ipynb_checkpoints/

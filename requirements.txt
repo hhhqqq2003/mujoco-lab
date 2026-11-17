@@ -1,0 +1,12 @@
+# MuJoCo Lab 依赖
+# 安装（推荐 --user，避免动系统 Python）：
+#   python3 -m pip install --user -r requirements.txt
+
+# 核心依赖（必须）
+mujoco>=3.0
+numpy>=1.24
+pillow>=10.0
+
+# 课程里用到的可选依赖
+matplotlib>=3.7    # 第 2/3/4/7 课与练习脚本画曲线、深度图着色
+scipy>=1.10        # 第 4 课 LQR 解 Riccati 方程
